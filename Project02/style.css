@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin-left: 455px;
+    margin-top: 122px;
+    gap: 12px;
+}
+
+button{
+    padding: 9px;
+}
+
+p{
+    text-align: center;
+    margin-top: 12px ;
+}
