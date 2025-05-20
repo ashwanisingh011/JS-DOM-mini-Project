@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>This is JavaScript Async</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+      const start = document.getElementById("start");
+      const stop = document.getElementById("stop");
+
+      const random = (number) => {
+        return Math.floor(Math.random() * (number + 1));
+      };
+
+      const randomColor = () => {
+        return `rgb(${random(255)} ${random(255)} ${random(255)})`;
+      };
+
+      const rand = ()=>{document.body.style.backgroundColor = randomColor()};
+      let interval;
+
+      start.addEventListener("click", () => {
+        interval = setInterval(rand, 1000);
+      });
+      stop.addEventListener("click", () => {
+        clearInterval(interval);
+      });
+    </script>
+  </body>
+</html>
